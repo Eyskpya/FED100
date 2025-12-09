@@ -1,0 +1,707 @@
+/**************/
+/* CSS REMEDY */
+/**************/
+
+*, *::after, *::before {
+  box-sizing:border-box;  
+}
+
+
+/*********************/
+/* CUSTOM PROPERTIES */
+/*********************/
+:root {
+  /* colors */
+  --color-header-background: white;
+  --color-footer-background: white;
+  --color-nav-background: white;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-header-background: grey;
+    --color-footer-background: black;
+    --color-nav-background: grey;
+  }
+}
+
+header {
+  background: var(--color-header-background);
+}
+body{
+  background: var(--color-nav-background);
+}
+
+nav {
+  background: var(--color-nav-background);
+}
+
+footer {
+  background: var(--color-footer-background);
+}
+
+:root {
+	/* startje */
+	--color-text:#111;
+	
+}
+
+
+
+
+
+/****************/
+/* JOUW STYLING */
+/****************/
+body 
+{
+	background-color: #eef4ff;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Carousel, Yezza Abnali */
+.Carousel h2{
+  margin-top: 5em;
+}
+
+.Carousel  h3{
+  display: none;
+  }
+
+.Carousel  ul {
+width: 100%;
+height: auto;
+display: flex;
+overflow-x: scroll;
+scroll-snap-type: x mandatory;
+scroll-behavior: smooth;
+}
+
+.Carousel  li{
+flex: 0 0 80%;
+scroll-snap-align: center;
+display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  padding: 1.5em;
+  margin: 0 -2em;
+  
+}
+
+.Carousel h2 {
+	text-align: center;
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	font-size: 1.5em;
+	background-color: #bdbdc6;
+	color: rgb(74, 74, 74);
+	border-radius: 0.2em;
+}
+.Carousel  li img {
+  width: 80%;
+  height: auto;
+  object-fit: contain; 
+  margin-bottom: 1em;
+  border-radius: 10px;
+}
+
+/*nav, Chatgpt en Naoufal Bichiri */
+
+head nav  {
+  flex-direction: row;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;  
+    gap: 0.5em;
+	font-size: large;
+}
+
+nav a:hover {
+	color: #e9e153;
+	transform: scale(1.5);
+	transition: 0.3s ease;
+
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: black;
+    font-size: 0.9em;
+    display: block;
+}
+header {
+background-color: rgb(177, 174, 174);
+}
+video {
+	margin: 1em;
+	width: 90%;
+	height: 90%;
+}
+
+header img {
+	display: block;
+	justify-content: center;
+	height: 6.5em;
+	width: 15em;
+                 
+}
+
+
+
+
+/* Hamburger nav, Chatgpt en Naoufal Bichiri  */
+.menu-toggle {
+	background: transparent;
+	border: none;
+	width: 44px;
+	height: 44px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+.menu-toggle:focus { outline: 3px solid rgba(0,0,0,0.15); }
+.hamburger {
+	display: block;
+	width: 24px;
+	height: 2px;
+	background: var(--color-text);
+	position: relative;
+}
+.hamburger::before, .hamburger::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	width: 24px;
+	height: 2px;
+	background: var(--color-text);
+	transition: transform .25s ease, opacity .2s ease;
+}
+.hamburger::before { top: -8px; }
+.hamburger::after { bottom: -8px; }
+.menu-toggle[aria-expanded="true"] .hamburger { background: transparent; }
+.menu-toggle[aria-expanded="true"] .hamburger::before { transform: translateY(8px) rotate(45deg); }
+.menu-toggle[aria-expanded="true"] .hamburger::after { transform: translateY(-8px) rotate(-45deg); }
+
+.closed {
+	display: none;
+}
+
+header nav {
+	display: flex;
+	gap: 1rem;
+	justify-content: space-between;
+}
+
+
+/* Font size control buttons, Chatgpt en Naoufal Bichiri */
+.font-size-control button {
+    background: rgb(255, 254, 254);
+    border: 0.1em solid var(--color-text);
+    padding: 0.1rem 0.3rem; 
+	margin-left: auto;
+    cursor: pointer;
+    font-size: 0.75rem;    
+    border-radius: 0.2em;
+    transition: background 0.2s;
+    width: auto;            
+}
+
+@media (max-width: 800px) {
+	.primary-nav {
+		display: none;
+		position: absolute;
+		top: 100%;
+		right: 0;
+		background: var(--color-background);
+		width: 220px;
+		box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+		border-radius: 6px;
+		padding: 0.5rem 0;
+	}
+	.primary-nav.open { display: block; }
+	.primary-nav ul { list-style: none; margin: 0; padding: 0; }
+	.primary-nav li { margin: 0; }
+	.primary-nav a { display: block; padding: 0.6rem 1rem; color: var(--color-text); text-decoration: none; }
+	.primary-nav a:hover, .primary-nav a:focus { background: rgba(0,0,0,0.04); }
+}
+
+/* font h2 index.html */
+.fonth2 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: center;
+  color: #fff;
+  background-color: #8fc7ff;
+}
+
+/* news section Section */
+section:first-of-type ul {
+	list-style: none;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	padding-left: 0px;
+	margin-left: 0.5em;
+	margin-right: 0.5em;
+	gap: 1.5em;
+}
+
+section:first-of-type ul li:first-of-type  {
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	background-color: pink;
+	padding: 1em;
+	border-radius: 1em;
+	transition: .2s;
+}
+
+section:first-of-type ul li:first-of-type:hover {
+	background-color: rgb(224, 168, 177);
+	transform: translate(0, -0.2em);
+	cursor: pointer;
+}
+
+.s3 {
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	list-style: none;
+	background-color: rgb(241, 249, 166);
+	padding: 1em;
+	border-radius: 1em;
+	transition: .2s;
+	gap: 1.5em;
+}
+.s3:hover{
+    background-color: rgb(214, 221, 145);
+	transform: translate(0, -0.2em);
+	cursor: pointer;
+}
+.s3 img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0.5em;
+}
+
+.battle {
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	list-style: none;
+	background-color: rgb(211, 150, 255);
+	padding: 1em;
+	border-radius: 1em;
+	transition: .2s;
+	gap: 1.5em;
+}
+.battle:hover{
+    background-color: rgb(177, 126, 214);
+	transform: translate(0, -0.2em);
+	cursor: pointer;
+}
+.battle img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0.5em;
+}
+
+.vapereon {
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	list-style: none;
+	background-color: rgb(174, 226, 147);
+	padding: 1em;
+	border-radius: 1em;
+	transition: .2s;
+	gap: 1.5em;
+}
+.vapereon:hover{
+    background-color: rgb(151, 196, 127);
+	transform: translate(0, -0.2em);
+	cursor: pointer;
+}
+.vapereon img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0.5em;
+}
+
+/* Evolutions section */
+.evolutionh3 {
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	text-align: center;	
+	font-size: 2em;
+	color: #fff;
+
+}
+.Evobutton button {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 3em;       
+  font-size: 18px;  
+  font-family: Arial, Helvetica, sans-serif;      
+  background-color: #4a4c4d;
+  color: rgb(255, 255, 255);             
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 1em;
+}
+
+.Evobutton button:hover {
+  background-color: #8d8d8d;
+}
+
+
+.Evolutions ol li {
+	list-style: none;
+	
+}
+
+.Evolutions ol li h4 {
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	font-size: 1.2em;
+	color: #ffd8f5;
+	
+}
+
+.Evolutions ol li p span{
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 1em;
+	color: #ffffff;
+	display: flex;
+	flex-direction: column;
+	column-gap: 1.5em;
+	padding-bottom: 1.5em;
+}
+
+section:nth-of-type(7) {
+	background-color: rgb(122, 122, 122);
+	border-radius: 2em;
+	margin-bottom: 2em;
+	margin-left: 0.5em;
+	margin-right: 0.5em;
+}
+
+section:nth-of-type(7) img {
+	cursor: pointer;
+	transition: .2s;
+	border: 1em solid #fff;
+	border-radius: 50em;
+	background-color: rgb(158, 158, 158);
+}
+
+section:nth-of-type(7) img:hover {
+	scale: 1.1;
+}
+
+/* Footer */
+.apps img {
+	width: 7em;
+	height: 7em;
+}
+.apps {
+  display: flex;
+  flex-direction: row;
+}
+
+footer ul{
+	padding: 0em;
+	margin-right: auto;
+}
+footer ul li {
+	list-style: none;
+	color: #fff;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+footer {
+	padding-top: 1em;
+	padding-bottom: 1em;
+	background-color: rgb(52, 52, 52);
+	margin-top: 3em;
+	margin-bottom: 0em;
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	border-radius: 0.2em;
+	padding-left: 0.3em;
+	padding-right: 0.3em;
+}
+footer p {
+	color :rgb(255, 255, 255);
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+footer h3 {
+	color :rgb(255, 255, 255);
+	margin-top: 0em;
+	margin-bottom: 0em;
+}
+footer h2 {
+	color :rgb(255, 255, 255);
+}
+
+/* Form footer, Naoufal Bichiri */
+form {
+		display: flex;
+		flex-direction: column;
+		color: white;
+		font-family: Arial, Helvetica, sans-serif;
+		margin-left: 0.5em;
+		margin-right: 0.5em;
+	}
+
+	input:required {
+		border: .2rem dashed rgb(203, 37, 37);
+	}
+
+	input:valid:not(:last-of-type), input:is(:-webkit-autofill, :autofill) {
+		border: .2rem dashed rgb(180, 242, 87);
+		background-color: #fff;
+	}
+
+	input {
+		margin-bottom: 1rem;
+		border-radius: .6rem;
+		padding: .5rem;
+	}
+
+	input:focus {
+		border: .2rem dashed black;
+	}
+
+	input:last-of-type:hover {
+		background-color: aliceblue;
+		cursor: pointer;
+	}
+
+/* Jigglypuff banner */
+.jp{
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.jp h2 {
+	text-align: center;
+	font-size: 3em;
+	background-color: #bdbdc6;
+	color: rgb(74, 74, 74);
+	border-radius: 0.2em;
+
+}
+
+
+/* Pokeball buttons */
+.button-row {
+    display: flex;     
+    gap: 0.5rem;         
+    justify-content: center; 
+    align-items: center;
+}
+
+.button-row button {
+    background: none;     
+    border: none;         
+    padding: 0;         
+    cursor: pointer;
+}
+h4 {
+	margin-left: 0.5em;
+	font-size: 0.9em;
+}
+
+h5 {
+	margin-left: 0.5em;
+	font-size: 0.9em;
+}
+.button-row button img {
+    width: 40px;          
+    height: 40px;         
+    object-fit: contain;
+}
+
+
+
+
+/* Jigglypuff img */
+	.box {
+  	border-radius: 5em;
+	margin-bottom: 2em;
+    display: flex;              
+    justify-content: center;   
+    align-items: center;       
+    margin: 2rem 0;      
+	margin-left: 0.5em;
+	margin-right: 0.5em;
+    margin-top: 2em; 
+    transition: background 3s;
+}
+
+.box.visible {
+  background: #919194;
+}
+
+
+.foto img {
+	width:  15em;   
+    height: 15em;
+}
+
+.foto img:hover {
+	scale: 1.1;
+}
+
+
+/* Stats img */
+.stats {
+    display: flex;             
+    justify-content: center;    
+    align-items: center;        
+    margin: 2rem 0;             
+}
+
+.stats img {
+    width:  20em;   
+    height: 20em;
+}
+
+
+/* Algemene button gedeelte, alles in het midden */
+.buttonh {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem; 
+    padding: 2rem 0;
+}
+
+
+
+/* Algemene button gedeelte */
+.buttonh {
+	margin-top: 2em;
+    color: rgb(255, 255, 255);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    cursor: pointer;
+    font-size: 1em;
+    background-color: rgb(93, 166, 225);
+	border-radius: 2em;
+	margin-left: 0.5em;
+	margin-right: 0.5em;
+}
+div.buttons1 {
+	display: flex;
+	flex-direction: row;
+	gap: 0.5em;
+}
+
+div.buttons2 {
+	display: flex;
+	flex-direction: row;
+	gap: 0.5em;
+}
+
+/* type buttons */
+button.Normal { 
+  background-color: #c9c9c5; 
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1em;
+  border-radius: 0.5em;
+} 
+button.Fairy  { 
+  background-color: #fcb7c6; 
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1em;
+  border-radius: 0.5em;
+} 
+button.Poison { 
+  background-color: #c057c0; 
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1em;
+  border-radius: 0.5em;
+}  
+button.Steel  { 
+  background-color: #9797a1; 
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1em;
+  border-radius: 0.5em;
+}  
+
+/* Loader */
+.buttonload {
+  background-color: #848786; 
+  border-radius: 0.5em;
+  color: white; 
+  margin-left: 2.5em;
+  padding: 0.5em;
+  font-size: 2em 
+}
+/* info gedeelte */
+.info {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: rgb(93, 166, 225);
+	border-radius: 2em;
+	margin-left: 0.5em;
+	margin-right: 0.5em;
+	
+}
+.info ul {
+	padding-left: 0em;
+}
+.info ul li {
+list-style: none;
+}
+.info h3 {
+	font-size: 1.2em;
+	color: rgb(255, 255, 255);
+
+}
+.info p {
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+#soundImage {
+	width: 3.5em;
+	height: 3.5em;
+}
+
+:root {
+  /* colors */
+  --color-header-background: white;
+  --color-footer-background: white;
+  --color-nav-background: white;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-header-background: grey;
+    --color-footer-background: black;
+    --color-nav-background: grey;
+  }
+}
+
+header {
+  background: var(--color-header-background);
+}
+body{
+  background: var(--color-nav-background);
+}
+
+nav {
+  background: var(--color-nav-background);
+}
+
+footer {
+  background: var(--color-footer-background);
+}

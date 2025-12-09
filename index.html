@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pokémon Mobile</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+
+<body>
+  <header>
+    <h1 hidden>Pokemon</h1>
+    <img src="images/pokemon.png" alt="pokemon logo">
+    <button class="menu-toggle" aria-expanded="false" aria-label="Toggle navigation"> <!-- ChatGPT en Naoufal Bichiri-->
+      <span class="hamburger" aria-hidden="true"></span>
+    </button>
+    <nav class="closed">
+      <ul>
+        <li><a href="pokemon.html">Pokémon</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">About Us</a></li>
+      </ul>
+      <div class="font-size-control"> <!-- ChatGPT en Naoufal Bichiri-->
+        <button id="fontDecrease" title="Decrease font size">Tt−</button>
+        <button id="fontReset" title="Reset font size">Tt</button>
+        <button id="fontIncrease" title="Increase font size">Tt+</button>
+      </div>
+    </nav>
+  </header>
+  <main>
+
+    <!-- News Section -->
+    <section>
+      <ul>
+        <li>
+          <img src="images/pokemoninter.png" alt="Pokemon international Championships" style="width:100%;">
+          <h2>LIVE: 2026 Latin America International Championships</h2>
+          <p>Tune in to LAIC now to watch Trainers battle it out in the Pokémon Trading Card Game.</p>
+        </li>
+        <li class="s3">
+          <img src="images/s3.jpg" alt="New Ranked Battles Season image">
+          <h3>Become a Legend with a New Ranked Battles Season</h3>
+          <p>Earn Chesnaughtite and other useful rewards while honing your battle skills in Pokémon Legends: Z-A Ranked Battles Season 3.</p>
+        </li>
+        <li class="battle">
+          <img src="images/battle.jpg" alt="Soar into Battle with Mega Pidgeot image">
+          <h3>Soar into Battle with Mega Pidgeot ex in Pokémon TCG Pocket</h3>
+          <p>Win solo battles to earn special promo cards with new artwork, including a Mega Pidgeot ex promo card.</p>
+        </li>
+        <li class="vapereon">
+          <img src="images/vapereon.jpg" alt="Vapereon tide battle image">
+          <h3>Vaporeon Turns the Tide of Battle in Pokémon UNITE</h3>
+          <p>The Bubble Jet Pokémon dives in to control the currents as a Ranged Defender.</p>
+        </li>
+      </ul>
+    </section>
+
+
+    <section>
+      <h2 hidden>Draaiende pokeball video</h2>
+      <video width="640" height="480" controls>
+        <source src="video/pokebal.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <button class="buttonload"> <!-- W3Schools-->
+  <i class="fa fa-spinner fa-spin"></i>Loading
+</button>
+   </section>
+
+  <section class="Carousel"> <!-- Yezza Abnali-->
+    <h2>Explore more Pokemon</h2>
+    <ul>
+      <li>
+        <img src="images/jigglypuff.JPEG" alt="Jigglypuff">
+      </li>
+      <li>
+        <img src="images/evee.JPEG" alt="Eevee">
+      </li>
+      <li>
+        <img src="images/lucario.JPEG" alt="Lucario">
+      </li>
+      <li>
+        <img src="images/mimikyu.JPEG" alt="Mimikyu">
+      </li>
+    </ul>
+  </section>
+
+</main>
+<footer>
+    <h2>Sign up for pokemon e-mails!</h2>
+    <form> <!-- Naoufal Bichiri-->
+					<label for="firstName">First Name</label>
+					<input required id="firstName" type="text">
+					<label for="lastName">Last Name</label>
+					<input required id="lastName" type="text">
+					<label for="mail">E-Mail</label>
+					<input required id="mail" type="email">
+					<input type="submit">
+		</form>
+    <div id="loader" class="loader" style="display:none;"></div>
+    <div class="apps">
+    <ul>
+      <li>News</li>
+      <li>Parents Guide</li>
+      <li>Customer Service</li>
+    </ul>
+    <img src="images/apps.PNG" alt="Instagram, Facebook en Youtube logos">
+    </div>
+    <h3>Copyright 2025, Eysan Ltd.</h3>
+  </footer>
+  <script src="scripts/script.js"></script>
+  <script src="scripts/font-size.js"></script>
+</body>
+</html>
